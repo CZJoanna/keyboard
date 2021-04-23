@@ -1,0 +1,319 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(127, 143, 133);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    color: #eee;
+}
+
+
+.top {
+    height: 50px;
+    background: #d6ccb8;
+    color:#555;
+}
+
+.lbar div,#login {
+    display: inline-block;
+    width:70px;
+    height: 50px;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 50px;
+} 
+
+/* alert */
+
+.alert {
+    position: fixed;
+    box-sizing: border-box;
+    bottom: 200px;
+    width: 1250px;
+    height: 200px;
+    border: 10px solid rgb(231, 227, 227);
+    padding: 20px;
+    text-align: center;
+    color: #555;
+    background-color: rgb(241, 246, 248);
+    opacity: 0.9;
+    font-size: 80px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 4px;
+    border-radius: 10px;
+    z-index: 1;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scoreArea {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    padding: 0;
+    margin-left: 80px;
+    /* 上下行距 */
+    line-height: 40px;
+
+}
+
+.scoreArea p {
+    display: inline-block;
+}
+
+#score {
+    font-size: 25px;
+    padding-top: 10px;
+    margin: 0;
+}
+
+#annotation {
+    font-size: 15px;
+    letter-spacing: 5px;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.visibility {
+    visibility: visible;
+}
+
+.displayNone {
+    display: none;
+}
+
+
+/* 鍵盤區 */
+
+/* 有上下排按鈕的 */
+
+.dolkey>div:last-child {
+    text-align: center;
+}
+
+/* Casplock圓點 */
+
+#capslock {
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    border: #b4aea3 1px solid;
+    margin-left: 10px;
+}
+
+/* 按鈕變色 */
+
+.changeBgc {
+    background-color: #eee;
+    color: #555;
+    box-shadow: 0 0 5px rgb(241, 246, 248);
+}
+
+.changeBgcCon {
+    background-color: rgb(75, 88, 80);
+}
+
+.changeBorder {
+    background-color: #eee;
+    box-shadow: 0 0 5px rgb(241, 246, 248);
+}
+
+.changeColor {
+    color: #555
+}
+
+/* 整個鍵盤區塊 */
+
+.keyBoard {
+    width: 1050px;
+    height: 385px;
+    background-color: rgb(90, 87, 77);
+    border-radius: 2px;
+    box-shadow: 0 0 10px gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+/* 各列(共六列)區塊 */
+
+div[class^="row"] {
+    display: flex;
+    justify-content: center;
+}
+
+/* 各列區塊裡的每個按鍵 */
+
+div[class^="row"]>div {
+    width: 62px;
+    height: 55px;
+    border: #b4aea3 1px solid;
+    border-radius: 2.5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+    padding: 6px;
+    margin: 4px;
+    transition: 0.2s;
+}
+
+/* 第一排的按鍵長寬 */
+
+div[class$="One"]>div {
+    width: 52px;
+    height: 32px;
+}
+
+/* 最後一排的按鍵長寬 */
+
+div[class$="Six"]>div {
+    height: 66px;
+}
+
+/* 寬度調整:波浪鍵 */
+
+.rowTwo>div:first-child {
+    width: 44px;
+}
+
+/* 寬度調整:backspace鍵 */
+
+.rowTwo>div:last-child {
+    width: 120px;
+}
+
+/* 寬度調整:tab鍵 */
+
+.rowThree>div:first-child {
+    width: 80px
+}
+
+/* 寬度調整:反斜線鍵 */
+
+.rowThree>div:last-child {
+    width: 84px
+}
+
+/* 寬度調整:Capslock鍵 */
+
+.rowFour>div:first-child {
+    width: 100px;
+}
+
+/*寬度調整:enter鍵 */
+
+.rowFour>div:last-child {
+    width: 134px;
+}
+
+/* 寬度調整:lshift鍵 */
+
+.rowFive>div:first-child {
+    width: 132px;
+}
+
+/*寬度調整:rshift鍵*/
+
+.rowFive>div:last-child {
+    width: 172px;
+}
+
+/* 寬度調整:space鍵 */
+
+.rowSix>div:nth-child(5) {
+    width: 342px;
+}
+
+/*寬度調整:方向塊 */
+
+.rowSix>div:last-child {
+    width: 172px;
+}
+
+/* 上方區塊 */
+
+.topArea {
+    width: 1050px;
+    height: 200px;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    
+}
+
+/* 文字區 */
+
+.lArea {
+    width: 620px;
+    color: white;
+    font-size: 35px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 5px;
+    border-left: double 10px rgb(230, 235, 209);
+    box-sizing: border-box;
+    padding-left: 20px;
+    margin-top: 50px;
+}
+
+/* keycode顯示區 */
+
+.rArea {
+    margin-top: 50px;
+    margin-left: 90px;
+}
+
+div[class^="funGup"] {
+    display: inline-block;
+    text-align: center;
+    margin-top: 20px
+}
+
+/* keycode顯示區文字 */
+
+div[class^="funGup"]>p {
+    color: black;
+    margin-top: 7px;
+    letter-spacing: 3px;
+}
+
+div[class^="funGup"]:first-child {
+    margin-right: 50px;
+}
+
+/* div[class^="funGup"]:not(:nth-child(2)) {
+    margin-right: 50px;
+} */
+/*  keycode顯示區的圈圈 */
+
+div[id$="Box"] {
+    box-sizing: border-box;
+    width: 120px;
+    height: 100px;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #dbc291 ;
+    border-radius: 30%;
+    line-height: 100px;
+}
+
+/* 文字區區顏色比對 */
+/* 正確綠 */
+
+.highlightG {
+    background-color: rgba(199, 228, 69, 0.6);
+    border-radius: 7px; 
+}
+
+/* 錯誤紅 */
+
+.highlightR {
+    background-color: rgba(184, 90, 121, 0.7);
+    border-radius: 7px;  
+}
